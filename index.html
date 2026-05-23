@@ -5,38 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="calculadora"></div> <input type="text" id="pantalla" readonly value="0">
+    <div class="calculadora"><input type="text" id="pantalla" readonly value="0">
+<!-- Fila 1 -->
+    <button onclick="borrarTodo()" class="boton-largo">C</button>
+    <button onclick="borrarUno()" class="operador">X</button>
+    <button onclick="elegirOperador('/')" class="operador">/</button>
 
-    <button onclick="elegirOperador('-')">-</button>
-    <button onclick="elegirOperador('+')">+</button>
-    <button onclick="elegirOperador('*')">*</button>
-    <button onclick="elegirOperador('/')">/</button>
-
+    <!-- Fila 2 -->
     <button onclick="agregarNumero('7')">7</button>
     <button onclick="agregarNumero('8')">8</button>
     <button onclick="agregarNumero('9')">9</button>
+    <button onclick="elegirOperador('*')" class="operador">*</button>
 
+    <!-- Fila 3 -->
     <button onclick="agregarNumero('4')">4</button>
     <button onclick="agregarNumero('5')">5</button>
     <button onclick="agregarNumero('6')">6</button>
+    <button onclick="elegirOperador('-')" class="operador">-</button>
 
-
+    <!-- Fila 4 -->
     <button onclick="agregarNumero('1')">1</button>
     <button onclick="agregarNumero('2')">2</button>
     <button onclick="agregarNumero('3')">3</button>
-    <button>=</button>
+    <button onclick="elegirOperador('+')" class="operador">+</button>
 
-    <button onlick="agregarNumero('0')">0</button>
+    <!-- Fila 5 -->
+    <button onclick="agregarNumero('0')">0</button>
     <button onclick="agregarNumero('.')">.</button>
-
+    <button onclick="calcular()" class="operador">=</button>
     </div>
 </body>
-<script scr="script.js">
+<script src="script.js">
 </script>
-</body>
-
 </html>

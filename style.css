@@ -1,0 +1,8 @@
+body {
+    background-color: #1e1e24; /* El fondo oscuro que ya pusimos */
+    display: flex;             /* Activa el modo de caja flexible */
+    justify-content: center;    /* Centra tu calculadora horizontalmente (de izquierda a derecha) */
+    align-items: center;        /* Centra tu calculadora verticalmente (de arriba a abajo) */
+    height: 100vh;             /* Le dice al cuerpo que use el 100% de la altura de la pantalla */
+    margin: 0;                 /* Borra los márgenes raros que los navegadores traen por defecto */
+}

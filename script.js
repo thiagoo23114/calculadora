@@ -2,6 +2,28 @@ let primerNumero = "";
 let segundoNumero= "";
 let operadorActual = "";
 
+const calculadora = document.querySelector(".calculadora");
+const pantalla = document.getElementById("pantalla");
+
+function crearOnda(event) {
+    const rect = calculadora.getBoundingClientRect();
+    const onda = document.createElement("span");
+    const tamaño = Math.max(120, Math.max(rect.width, rect.height) * 1.15);
+
+    onda.className = "ripple";
+    onda.style.width = `${tamaño}px`;
+    onda.style.height = `${tamaño}px`;
+    onda.style.left = `${event.clientX - rect.left}px`;
+    onda.style.top = `${event.clientY - rect.top}px`;
+
+    calculadora.appendChild(onda);
+
+    onda.addEventListener("animationend", () => onda.remove());
+}
+
+document.querySelectorAll("button").forEach((boton) => {
+    boton.addEventListener("click", crearOnda);
+});
 
 function elegirOperador(operador) {
     primerNumero = pantalla.value;
@@ -9,9 +31,6 @@ function elegirOperador(operador) {
     pantalla.value = pantalla.value + " " + operador + " ";
 
 }
-const pantalla =
-    document.getElementById("pantalla")
-    ;
 function agregarNumero(numero) {
     if (pantalla.value === "0") {
         pantalla.value = numero;

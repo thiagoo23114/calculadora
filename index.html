@@ -13,14 +13,20 @@
     <div class="calculadora"><input type="text" id="pantalla" readonly value="0">
 <!-- Fila 1 -->
     <button onclick="borrarTodo()" class="boton-largo">C</button>
-    <button onclick="borrarUno()" class="operador">X</button>
+    <button onclick="borrarUno()" class="boton-borrar" aria-label="Borrar último caracter">
+        <svg viewBox="0 0 65 49" role="img" aria-hidden="true">
+            <rect x="1" y="1" width="63" height="47" rx="10" fill="#666" />
+            <path d="M20 15L45 34" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M45 15L20 34" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+    </button>
     <button onclick="elegirOperador('/')" class="operador">/</button>
 
     <!-- Fila 2 -->
     <button onclick="agregarNumero('7')">7</button>
     <button onclick="agregarNumero('8')">8</button>
     <button onclick="agregarNumero('9')">9</button>
-    <button onclick="elegirOperador('*')" class="operador">*</button>
+    <button onclick="elegirOperador('*')" class="operador">x</button>
 
     <!-- Fila 3 -->
     <button onclick="agregarNumero('4')">4</button>

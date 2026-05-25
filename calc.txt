@@ -1,0 +1,19 @@
+cerbro (.py)
+
+inputs
+num1 
+num2
+operacion 
+
+if
+elif
+else 
+
+print en todos 
+else en division de 0
+print result
+float en los nums (num1 num2)
+
+vista bonita (.css)
+
+ejecut (.html)
